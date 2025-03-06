@@ -1,12 +1,9 @@
 export default function Home() {
   return (
     <>
-      <div className={'container'}>
+      <div className={"container"}>
         container (should be blue)
-
-        <div className="inner">
-          container + inner (should be yellow)
-        </div>
+        <div className="inner">container + inner (should be green)</div>
       </div>
 
       <style jsx>{`
@@ -14,13 +11,11 @@ export default function Home() {
           color: blue;
           padding: 3rem;
 
-          .inn {
-            &_er {
-              color: yellow;
-            }
+          .inner {
+            color: green;
           }
         }
       `}</style>
     </>
-  )
+  );
 }
