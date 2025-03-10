@@ -6,9 +6,7 @@ export default function Home() {
       <div className={"container"}>
         container (should be blue)
         <div className="inner">container + inner (should be green)</div>
-        <div className="icon">
-          <PlusIcon />
-        </div>
+        <span>span (should be red)</span>
       </div>
 
       <style jsx>{`
@@ -18,6 +16,10 @@ export default function Home() {
 
           .inner {
             color: green;
+          }
+            
+          span {
+            color: red;
           }
         }
       `}</style>

@@ -23,6 +23,10 @@ export default function Home() {
         <div className="inner">
           container + inner (should be yellow)
         </div>
+        
+        <span>
+          span (should be red)
+        <span>
       </div>
 
       <style jsx>{`
@@ -30,10 +34,12 @@ export default function Home() {
           color: blue;
           padding: 3rem;
 
-          .inn {
-            &er {
-              color: yellow;
-            }
+          .inner {
+            color: yellow;
+          }
+          
+          span {
+            color: red;
           }
         }
       `}</style>
