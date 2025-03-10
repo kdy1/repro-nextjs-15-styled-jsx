@@ -15,6 +15,7 @@
     "styled-jsx": "^5.1.6"
   },
   "devDependencies": {
+    "@svgr/webpack": "8.1.0",
     "@types/node": "^22.13.9",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
