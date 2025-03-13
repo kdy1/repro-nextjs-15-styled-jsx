@@ -4,10 +4,15 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  next@15.2.1:
+    hash: zg4wgfm7mjxqrc5fpdpw4wg4we
+    path: patches/next@15.2.1.patch
+
 dependencies:
   next:
     specifier: 15.2.1
-    version: 15.2.1(@babel/core@7.26.10)(react-dom@19.0.0)(react@19.0.0)
+    version: 15.2.1(patch_hash=zg4wgfm7mjxqrc5fpdpw4wg4we)(@babel/core@7.26.10)(react-dom@19.0.0)(react@19.0.0)
   react:
     specifier: ^19.0.0
     version: 19.0.0
@@ -3592,7 +3597,7 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next@15.2.1(@babel/core@7.26.10)(react-dom@19.0.0)(react@19.0.0):
+  /next@15.2.1(patch_hash=zg4wgfm7mjxqrc5fpdpw4wg4we)(@babel/core@7.26.10)(react-dom@19.0.0)(react@19.0.0):
     resolution: {integrity: sha512-zxbsdQv3OqWXybK5tMkPCBKyhIz63RstJ+NvlfkaLMc/m5MwXgz2e92k+hSKcyBpyADhMk2C31RIiaDjUZae7g==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
     hasBin: true
@@ -3636,6 +3641,7 @@ packages:
       - '@babel/core'
       - babel-plugin-macros
     dev: false
+    patched: true
 
   /no-case@3.0.4:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}

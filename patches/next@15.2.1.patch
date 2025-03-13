@@ -1,0 +1,13 @@
+diff --git a/dist/build/swc/options.js b/dist/build/swc/options.js
+index 59b15fb700a1c1b4b2930b5ce801bd2f01d57c6f..17e4a9d8125b884a2bb245b3abd0b1a89684b378 100644
+--- a/dist/build/swc/options.js
++++ b/dist/build/swc/options.js
+@@ -146,7 +146,7 @@ function getBaseSWCOptions({ filename, jest, development, hasReactRefresh, globa
+             ])) : undefined,
+         relay: compilerOptions == null ? void 0 : compilerOptions.relay,
+         // Always transform styled-jsx and error when `client-only` condition is triggered
+-        styledJsx: {},
++        styledJsx: compilerOptions == null ? void 0 : compilerOptions.styledJsx,
+         // Disable css-in-js libs (without client-only integration) transform on server layer for server components
+         ...!isReactServerLayer && {
+             // eslint-disable-next-line @typescript-eslint/no-use-before-define
