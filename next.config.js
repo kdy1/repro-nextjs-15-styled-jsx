@@ -10,6 +10,12 @@ const nextConfig = {
     return config;
   },
 
+  compiler: {
+    styledJsx:{
+      useLightningcss:true
+    }
+  },
+
   experimental: {
     useLightningcss: true,
     turbo: {
