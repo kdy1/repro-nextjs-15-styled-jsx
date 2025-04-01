@@ -14,12 +14,16 @@ The following code:
 
 ```tsx
 export default function Home() {
+  const breakpoint = "500px";
   return (
     <>
       <div className={"container"}>
         container (should be blue)
         <div className="inner">container + inner (should be green)</div>
         <span>span (should be red)</span>
+        <div className="responsive">
+          responsive (purple on mobile, orange on desktop)
+        </div>
       </div>
 
       <style jsx>{`
@@ -30,9 +34,15 @@ export default function Home() {
           .inner {
             color: green;
           }
-            
+
           span {
             color: red;
+          }
+
+          @media (max-width: ${breakpoint}) {
+            .responsive {
+              color: purple;
+            }
           }
         }
       `}</style>
@@ -46,6 +56,7 @@ Should produce CSS that properly flattens the nested selectors, but the implemen
 ## Configuration
 
 The project uses:
+
 - Next.js 15.2.1
 - React 19
 - Styled JSX 5.1.6
