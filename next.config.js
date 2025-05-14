@@ -17,7 +17,6 @@ const nextConfig = {
   },
 
   experimental: {
-    useLightningcss: true,
     turbo: {
       rules: {
         "*.svg": {
