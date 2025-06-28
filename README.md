@@ -33,22 +33,3 @@ Is compiled to:
 ```
 
 This issue prevents global styles from working correctly in Styled JSX when combined with other selectors.
-
-- Next.js 15.2.1
-- React 19
-- Styled JSX 5.1.6
-- Lightning CSS (enabled via `useLightningcss: true` in next.config.js)
-- Turbopack (optional, but issues are present with or without it)
-
-## Running the project
-
-```bash
-# Install dependencies
-pnpm install
-
-# Run with default compiler
-pnpm dev
-
-# Run with Turbopack
-pnpm dev -- --turbo
-```
