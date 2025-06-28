@@ -34,10 +34,6 @@ Is compiled to:
 
 This issue prevents global styles from working correctly in Styled JSX when combined with other selectors.
 
-## Configuration
-
-The project uses:
-
 - Next.js 15.2.1
 - React 19
 - Styled JSX 5.1.6
