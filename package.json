@@ -3,25 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.4.0-canary.47",
+    "next": "15.4.0-canary.96",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "styled-jsx": "5.1.7"
   },
   "devDependencies": {
     "@svgr/webpack": "8.1.0",
-    "@types/node": "22.15.18",
-    "@types/react": "19.1.4",
-    "@types/react-dom": "19.1.5",
-    "browserslist": "4.24.5",
-    "eslint": "9.26.0",
-    "eslint-config-next": "15.3.2",
+    "@types/node": "24.0.6",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "browserslist": "4.25.1",
+    "eslint": "9.30.0",
+    "eslint-config-next": "15.3.4",
     "typescript": "5.8.3"
   },
   "pnpm": {
