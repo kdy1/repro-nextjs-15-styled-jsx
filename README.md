@@ -1,16 +1,8 @@
-# CSS Nesting in Next.js 15 with Styled JSX
-
-- Demo repository for testing CSS flattening with Next.js 15 and Styled JSX
-
-## Overview
-
-This project tests CSS nesting capabilities in Next.js 15 with Styled JSX, specifically looking at CSS flattening functionality. It demonstrates issues with nested CSS selectors in Styled JSX both with and without Turbopack.
-
-Next.js 15 includes [Lightning CSS](https://lightningcss.dev/) which supports CSS nesting, but there appear to be issues with how this works with Styled JSX.
+# Styled JSX :global() Selector Issue
 
 ## Issue with :global() Selector in CSS Output
 
-The current implementation demonstrates a critical issue with how Styled JSX handles the `:global()` selector. In the test page (`pages/index.tsx`), the following CSS:
+Styled JSX incorrectly handles the `:global()` selector when used in combination with other selectors. The following CSS:
 
 ```css
 :global(.c1),
@@ -41,51 +33,6 @@ Is compiled to:
 ```
 
 This issue prevents global styles from working correctly in Styled JSX when combined with other selectors.
-
-## Example
-
-The following code:
-
-```tsx
-export default function Home() {
-  const breakpoint = "500px";
-  return (
-    <>
-      <div className={"container"}>
-        container (should be blue)
-        <div className="inner">container + inner (should be green)</div>
-        <span>span (should be red)</span>
-        <div className="responsive">
-          responsive (purple on mobile, orange on desktop)
-        </div>
-      </div>
-
-      <style jsx>{`
-        .container {
-          color: blue;
-          padding: 3rem;
-
-          .inner {
-            color: green;
-          }
-
-          span {
-            color: red;
-          }
-
-          @media (max-width: ${breakpoint}) {
-            .responsive {
-              color: purple;
-            }
-          }
-        }
-      `}</style>
-    </>
-  );
-}
-```
-
-Should produce CSS that properly flattens the nested selectors, but the implementation currently has issues.
 
 ## Configuration
 
