@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.4.0-canary.96",
+    "next": "15.4.0-canary.104",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "styled-jsx": "5.1.7"
@@ -28,5 +28,6 @@
     "onlyBuiltDependencies": [
       "sharp"
     ]
-  }
+  },
+  "packageManager": "pnpm@8.15.7+sha256.50783dd0fa303852de2dd1557cd4b9f07cb5b018154a6e76d0f40635d6cee019"
 }
